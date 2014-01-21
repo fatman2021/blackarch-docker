@@ -7,19 +7,16 @@ RUN pacman -Syu --noconfirm --ignore=filesystem && \
     /usr/bin/ln -s /usr/sbin /sbin && \
     pacman -Scc --noconfirm
 
-CMD if ! command -v pacaur ; then
-        curl https://aur.archlinux.org/packages/co/cower/cower.tar.gz | tar -zx
-        pushd cower
-        makepkg -s PKGBUILD --install `if [ $(id -u) = 0 ]; then echo "--asroot" ; fi`
-        popd
-        rm -rf cower
-    
-        curl https://aur.archlinux.org/packages/pa/pacaur/pacaur.tar.gz | tar -zx
-        pushd pacaur
-        makepkg -s PKGBUILD --install `if [ $(id -u) = 0 ]; then echo "--asroot" ; fi`
-        popd
-        rm -rf pacaur
-    fi
+CMD curl https://aur.archlinux.org/packages/co/cower/cower.tar.gz | tar -zx
+CMD pushd cower
+CMD makepkg -s PKGBUILD --install `if [ $(id -u) = 0 ]; then echo "--asroot" ; fi`
+CMD popd
+CMD rm -rf cower
+CMD curl https://aur.archlinux.org/packages/pa/pacaur/pacaur.tar.gz | tar -zx
+CMD pushd pacaur
+CMD makepkg -s PKGBUILD --install `if [ $(id -u) = 0 ]; then echo "--asroot" ; fi`
+CMD popd
+CMD rm -rf pacaur
 
 RUN pacman -S afflib aircrack-ng arch-install-scripts autoconf avr-libc bash bluez bluez-libs bluez-utils\
 boost boost-libs c-ares cmake cuda curl devtools dietlibc distcc dmenu gcc gcc-libs gdbm glib2\
