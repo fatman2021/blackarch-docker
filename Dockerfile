@@ -7,6 +7,9 @@ RUN pacman -Syu --noconfirm --ignore=filesystem && \
     /usr/bin/ln -s /usr/sbin /sbin && \
     pacman -Scc --noconfirm
 
+ADD ./pacaur.sh /pacaur.sh
+RUN /pacaur.sh
+
 RUN pacaur -S afflib aircrack-ng arch-install-scripts autoconf avr-libc bash bluez bluez-libs bluez-utils \
 boost boost-libs c-ares cmake cuda curl devtools dietlibc distcc dmenu gcc gcc-libs gdbm glib2 \
 glibc gmp gnuradio gnutls gpsd graphviz gtk2 gtksourceview2 haskell-openafp haskell-regex-compat impacket \
