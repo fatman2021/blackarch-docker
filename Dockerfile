@@ -18,7 +18,7 @@ CMD makepkg -s PKGBUILD --install `if [ $(id -u) = 0 ]; then echo "--asroot" ; f
 CMD popd
 CMD rm -rf pacaur
 
-RUN pacman -S afflib aircrack-ng arch-install-scripts autoconf avr-libc bash bluez bluez-libs bluez-utils\
+RUN pacaur -S afflib aircrack-ng arch-install-scripts autoconf avr-libc bash bluez bluez-libs bluez-utils\
 boost boost-libs c-ares cmake cuda curl devtools dietlibc distcc dmenu gcc gcc-libs gdbm glib2\
 glibc gmp gnuradio gnutls gpsd graphviz gtk2 gtksourceview2 haskell-openafp haskell-regex-compat impacket\
 iptables java-environment jre7-openjdk-headless lib32-glibc libcap-ng libdaq-static libdnet libevent\
