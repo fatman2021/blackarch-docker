@@ -11,6 +11,9 @@ RUN /pacaur.sh
 # Space-saving strats
 RUN pacman -Scc --noconfirm
 
+# Add repo
+CMD echo [blackarch]\nServer\ =\ http://blackarch.pi3rrot.net/blackarch/$repo/os/$arch > /etc/pacman.conf
+
 # Dem deps
 RUN pacaur -S --needed --noconfirm --noedit --devel aircrack-ng arch-install-scripts autoconf avr-libc bash bluez bluez-libs bluez-utils \
  boost boost-libs c-ares cmake curl devtools dietlibc distcc dmenu gcc gcc-libs gdbm glib2 \
@@ -32,6 +35,5 @@ RUN pacaur -S --needed --noconfirm --noedit --devel aircrack-ng arch-install-scr
  ruby-simplecov-html ruby-unf samba screen sqlite3 sslscan talloc tcpdump tidyhtml \
  tor tre twisted unixodbc util-linux vala  wxgtk zlib zsh
 
-# Add repo
-CMD echo [blackarch]\nServer\ =\ http://blackarch.pi3rrot.net/blackarch/$repo/os/$arch > /etc/pacman.conf
+
 
