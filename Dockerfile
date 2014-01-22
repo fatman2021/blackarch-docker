@@ -12,7 +12,7 @@ RUN /pacaur.sh
 RUN pacman -Scc --noconfirm
 
 # Add repo
-CMD echo [blackarch]\nServer\ =\ http://blackarch.pi3rrot.net/blackarch/$repo/os/$arch > /etc/pacman.conf
+CMD echo "[blackarch]\nServer\ =\ http://blackarch.pi3rrot.net/blackarch/$repo/os/$arch" > /etc/pacman.conf
 
 # Main install
 RUN pacman -Syy --needed -noconfirm blackarch
