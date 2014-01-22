@@ -17,14 +17,14 @@ RUN pacaur -S --needed --noconfirm --noedit --devel aircrack-ng arch-install-scr
  glibc gmp gnuradio gnutls gpsd graphviz gtk2 gtksourceview2 haskell-openafp haskell-regex-compat impacket \
  iptables java-environment jre7-openjdk-headless libcap-ng libdnet libevent \
  libextractor libglade libgnome libgnomeui libjpeg libnet libnfc libnl libpcap \
- libpng libssh libssh2 libusbx libusbx libx11 libx11 rdesktop libxslt \
+ libpng libssh libssh2 libusbx libx11 rdesktop libxslt \
  linux make mariadb metasploit mono ncurses nmap nodejs openbox openssl \
- orbited pcre perl perl-bit-vector perl-class-gomor perl-class-load perl-class-load \
+ orbited pcre perl perl-bit-vector perl-class-gomor perl-class-load \
  perl-convert-pem perl-crypt-des perl-file-which perl-io-socket-ssl \
  perl-io-tty perl-libwww perl-net-dns perl-net-snmp perl-switch perl-tk perl-try-tiny \
  perl-xml-libxml perl-xml-twig phonon-backend php postgresql-libs ppp pygtk python2 \
  python2-dnspython python2-gobject2 python2-numpy python2-paramiko \
- python2-pycurl python2-pyopenssl python3 python bluez-libs python-django python-ipcalc python-xbee \
+ python2-pycurl python2-pyopenssl python3 python-django python-ipcalc python-xbee \
  qt4 qt5-base readline ruby ruby1.8 ruby1.9  \
  ruby-activerecord ruby-addressable ruby-diff-lcs ruby-domain_name \
  ruby-ethon ruby-ffi ruby-gscraper ruby-json ruby-libv8 \
