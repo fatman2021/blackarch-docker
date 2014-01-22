@@ -1,21 +1,23 @@
 FROM base/devel:minimal
 MAINTAINER elken
 
-# Ensure max level
-RUN pacman -Syyu --needed --noconfirm
+# Deps for scripts
+RUN pacman -Syyu --needed --noconfirm wget base-devel
 
-# Install pacaur
+# Add needed files & scripts
 ADD ./pacaur.sh /pacaur.sh
+ADD ./sign.sh /sign.sh
+ADD ./pacman.conf /etc/pacman.conf
+
+# Run scripts
+RUN /sign.sh
 RUN /pacaur.sh
+
+# Main install
+RUN pacman -Syyu blackarch
 
 # Space-saving strats
 RUN pacman -Scc --noconfirm
-
-# Add repo
-RUN echo "[blackarch]\nServer\ =\ http://blackarch.pi3rrot.net/blackarch/$repo/os/$arch" > /etc/pacman.conf
-
-# Main install
-RUN pacman -Syy --needed -noconfirm blackarch
 
 # Dem deps
 #RUN pacaur -S --needed --noconfirm --noedit --devel aircrack-ng arch-install-scripts autoconf avr-libc bash bluez bluez-libs bluez-utils \
