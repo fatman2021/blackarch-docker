@@ -9,6 +9,8 @@ v0.1
 
 3. Put gpg keys in ssh (If needed)
 
-4. ```docker build -t elken/blackarch-docker .```
+4. Edit pacman.conf server
 
-5. ```docker run -i -t elken/blackarch-docker /bin/bash```
+5. ```docker build -t elken/blackarch-docker .```
+
+6. ```docker run -i -t elken/blackarch-docker /bin/bash```
