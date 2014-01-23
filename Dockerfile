@@ -1,20 +1,20 @@
 FROM base/devel:minimal
 MAINTAINER elken
 
-# Deps for scripts
-RUN pacman -Syyu --needed --noconfirm wget base-devel
-
 # Add needed files & scripts
 ADD ./pacaur.sh /pacaur.sh
 ADD ./sign.sh /sign.sh
 ADD ./pacman.conf /etc/pacman.conf
+
+# Deps for scripts
+RUN pacman -Syy --needed --noconfirm wget
 
 # Run scripts
 RUN /sign.sh
 RUN /pacaur.sh
 
 # Main install
-RUN pacman -Syyu blackarch
+RUN pacman -S --needed --noconfirm blackarch
 
 # Space-saving strats
 RUN pacman -Scc --noconfirm
