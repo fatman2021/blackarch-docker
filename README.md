@@ -11,6 +11,6 @@ v0.1
 
 4. Edit pacman.conf server
 
-5. ```docker build -t elken/blackarch-docker .```
+5. ```docker build -t blackarch/docker .```
 
-6. ```docker run -i -t elken/blackarch-docker /bin/bash```
+6. ```docker run -i -t blackarch/docker /bin/bash```
