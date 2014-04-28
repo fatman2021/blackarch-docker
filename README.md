@@ -14,3 +14,5 @@ v0.1
 5. ```docker build -t blackarch/docker .```
 
 6. ```docker run -i -t blackarch/docker /bin/bash```
+
+View [here](https://index.docker.io/u/blackarch/docker/) for build info.
