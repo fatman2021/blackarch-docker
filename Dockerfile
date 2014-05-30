@@ -8,7 +8,7 @@ ADD ./gpg /root/.gpg
 ADD ./ssh /root/.ssh
 
 # Deps for scripts
-RUN pacman -Syy --needed --noconfirm wget
+RUN pacman -Syy --needed --noconfirm wget sudo
 RUN curl -s http://blackarch.org/strap.sh | sudo sh
 
 # Run scripts
