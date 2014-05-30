@@ -14,7 +14,7 @@ RUN curl -s http://blackarch.org/strap.sh | sudo sh
 # Run scripts
 RUN /pacaur.sh
 
-RUN pacaur -Syy --needed --noconfirm gtk glib
+RUN pacaur -Syy --needed --noconfirm gtk glib --asroot
 # Main install
 RUN pacman -S --needed --noconfirm blackarch
 
