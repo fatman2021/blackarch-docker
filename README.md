@@ -2,6 +2,8 @@ blackarch-docker
 ================
 
 v0.1
+Note: DO NOT BUILD MANUALLY YET, it currently munches up HDD space every
+re-build, it should be ok when I get a working version.
 
 1. Pull repo
 
