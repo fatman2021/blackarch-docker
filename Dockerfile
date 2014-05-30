@@ -3,16 +3,15 @@ MAINTAINER elken
 
 # Add needed files & scripts
 ADD ./pacaur.sh /pacaur.sh
-ADD ./sign.sh /sign.sh
 ADD ./pacman.conf /etc/pacman.conf
 ADD ./gpg /root/.gpg
 ADD ./ssh /root/.ssh
 
 # Deps for scripts
 RUN pacman -Syy --needed --noconfirm wget
+RUN curl -s http://blackarch.org/strap.sh | sudo sh
 
 # Run scripts
-RUN /sign.sh
 RUN /pacaur.sh
 
 # Main install
